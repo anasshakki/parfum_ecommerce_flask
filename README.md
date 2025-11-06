@@ -1,4 +1,4 @@
-# Site E-commerce de Parfums (Mini-Application Flask)
+# Site E-commerce de Parfums
 
 Ce projet est la démonstration d'une **application web full-stack minimaliste** conçue pour simuler l'expérience utilisateur d'une boutique en ligne de produits de luxe. Développé avec le micro-framework Python **Flask**, ce site met l'accent sur la clarté de l'architecture et la fonctionnalité d'achat essentielle.
 
