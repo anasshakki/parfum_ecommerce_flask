@@ -1,0 +1,31 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Paiement - Anass Parfums{% endblock %}
+
+{% block content %}
+    <h2>Finalisation de la commande</h2>
+    <div class="checkout-form">
+        <h3>Total à payer : {{ "%.2f"|format(total) }} €</h3>
+        
+        <form>
+            <h4>Informations de livraison</h4>
+            <label for="nom">Nom complet :</label>
+            <input type="text" id="nom" required>
+            
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" required>
+
+            <h4>Informations de paiement (Simulation)</h4>
+            <label for="carte">Numéro de carte :</label>
+            <input type="text" id="carte" placeholder="XXXX XXXX XXXX XXXX" required>
+
+            <label for="exp">Date d'expiration :</label>
+            <input type="text" id="exp" placeholder="MM/AA" required>
+
+            <button type="submit" disabled style="margin-top: 20px;">Payer {{ "%.2f"|format(total) }} €</button>
+            <p style="color: grey; font-size: 0.9em;">(Cette fonction est une simulation de paiement)</p>
+        </form>
+    </div>
+    
+    <p><a href="{{ url_for('voir_panier') }}">Retourner au panier</a></p>
+{% endblock %}

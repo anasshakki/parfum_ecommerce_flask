@@ -1,0 +1,23 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Mon Panier{% endblock %}
+
+{% block content %}
+    <h2>Votre Panier</h2>
+    {% if panier %}
+        <ul class="liste-panier">
+            {% for item in panier %}
+                <li>{{ item.nom }} - {{ "%.2f"|format(item.prix) }} €</li>
+            {% endfor %}
+        </ul>
+        <p class="total"><strong>Total: {{ "%.2f"|format(total) }} €</strong></p>
+        
+        <p>
+            <a href="{{ url_for('payer') }}" class="checkout-button-link">Procéder au paiement</a>
+        </p>
+        
+    {% else %}
+        <p>Votre panier est vide. Visitez notre <a href="{{ url_for('index') }}">catalogue</a> pour trouver votre parfum !</p>
+    {% endif %}
+    <p><a href="{{ url_for('index') }}">Retourner au catalogue</a></p>
+{% endblock %}

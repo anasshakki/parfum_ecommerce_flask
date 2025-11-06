@@ -1,0 +1,19 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Catalogue - Mon Site de Parfums{% endblock %}
+
+{% block content %}
+    <h2>Catalogue de Parfums</h2>
+    <div class="catalogue">
+        {% for parfum in parfums %}
+            <div class="parfum-card">
+                <img src="{{ url_for('static', filename='images/' + parfum.image) }}" alt="{{ parfum.nom }}">
+                <h3>{{ parfum.nom }}</h3>
+                <p class="prix">{{ "%.2f"|format(parfum.prix) }} €</p>
+                <form method="POST" action="{{ url_for('ajouter_au_panier', parfum_id=parfum.id) }}">
+                    <button type="submit">Ajouter au panier</button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

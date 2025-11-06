@@ -1,0 +1,183 @@
+﻿/* static/style.css */
+:root {
+    --couleur-primaire: #8B4513; 
+    --couleur-secondaire: #f4f4f4;
+    --couleur-fond: #ffffff;
+}
+
+/* static/style.css */
+
+/* Fichier : static/style.css */
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #E8DCCF; 
+    color: white;
+    
+    /* ATTENTION : DÉCOMMENTER CES LIGNES MAINTENANT */
+    background-image: url('/static/images/bg.jpg'); /* Chemin corrigé pour l'URL */
+    background-repeat: repeat; 
+    background-attachment: fixed;
+}
+
+/* Modifiez également la couleur de l'en-tête (header) pour un meilleur contraste */
+header { 
+    background-color: #5D4037; /* Marron chocolat foncé */
+    color: white; 
+    padding: 15px 30px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+nav a { 
+    color: white; 
+    margin-left: 25px; 
+    text-decoration: none; 
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ffd700;
+}
+main { 
+    padding: 40px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+.catalogue { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px; 
+}
+.parfum-card { 
+    background: var(--couleur-fond); 
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    padding: 20px; 
+    width: 250px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.parfum-card:hover {
+    transform: translateY(-5px);
+}
+.parfum-card img { 
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px; 
+}
+.prix { 
+    font-size: 1.3em;
+    font-weight: bold; 
+    color: var(--couleur-primaire); 
+    margin: 10px 0;
+}
+button, .checkout-button {
+    background-color: var(--couleur-primaire);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+button:hover:not(:disabled) {
+    background-color: #A0522D;
+}
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.liste-panier {
+    list-style: none;
+    padding: 0;
+}
+.liste-panier li {
+    background: transparent; /* CORRECTION 1 : Rendre le fond transparent */
+    border-bottom: 1px dashed #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    color: white; /* Assurez-vous que le texte des commandes reste blanc */
+}
+
+.total {
+    font-size: 1.5em;
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid white; /* CORRECTION 2 : Rendre la ligne blanche */
+    color: white; /* S'assurer que le texte "Total" est bien blanc */
+}
+
+footer {
+    background-color: #333;
+    color: #aaa;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+
+.checkout-form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    /* Rendre le fond du formulaire semi-transparent noir pour le contraste */
+    background: rgba(0, 0, 0, 0.6); 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+}
+
+.checkout-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    /* Rendre les libellés blancs pour qu'ils s'affichent sur le fond sombre */
+    color: white; 
+}
+
+.checkout-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Rendre le texte d'entrée noir (sur fond blanc de l'input) */
+    color: black; 
+}
+
+/* Style pour le lien "Procéder au paiement" */
+.checkout-button-link {
+    display: inline-block;
+    background-color: var(--couleur-primaire);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.checkout-button-link:hover {
+    background-color: #A0522D;
+}
